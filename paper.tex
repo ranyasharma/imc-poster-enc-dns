@@ -1,0 +1,82 @@
+%\documentclass[runningheads]{llncs}
+%\documentclass[10pt,sigconf,letterpaper,anonymous,nonacm]{acmart}
+%\documentclass[10pt,sigconf,letterpaper]{acmart}
+\documentclass[sigconf]{acmart}
+\settopmatter{printacmref=false} % Disable the ACM reference format block
+\renewcommand\footnotetextcopyrightpermission[1]{} % Remove copyright footnote
+\pagestyle{plain}
+% General
+% -------
+\usepackage[labelfont={small,bf},textfont={small,it},skip=1pt]{caption}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{tabularx}
+\usepackage[normalem]{ulem}
+\usepackage{fancyref}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{amssymb}
+\usepackage{pdflscape}
+\usepackage{balance}
+\usepackage{subcaption}
+
+
+%\usepackage[skip=0.1cm]{parskip}
+%\setlength{\textfloatsep}{0pt}
+%\titlespacing*{\section}{0pt}{1.1\baselineskip}
+
+\useunder{\uline}{\ul}{}
+
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\etal}{{\it et al.}}
+
+
+\pagestyle{plain}
+
+
+%%%%%%%%%%%%%%%%%%%%  SPACE SAVINGS %%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[all=normal,wordspacing]{savetrees}
+
+%%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
+
+\title{Poster: Global Measurements of the Availability and Response Times of \\ Public Encrypted DNS Resolvers}
+
+
+\author{Ranya Sharma}
+\affiliation{%
+  \institution{University of Chicago}
+  \city{Chicago}
+  \country{Illinois}}
+\email{ranyasharma@uchicago.edu}
+
+\author{Nick Feamster}
+\affiliation{%
+  \institution{University of Chicago}
+  \city{Chicago}
+  \country{Illinois}}
+\email{feamster@uchicago.edu}
+
+%%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{sloppypar}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+        
+\maketitle
+
+\pagebreak
+\bibliographystyle{abbrv}
+\bibliography{paper}
+
+\end{sloppypar}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%  END OF DOCUMENT  %%%%%%%%%%%%%%%%%%%%
