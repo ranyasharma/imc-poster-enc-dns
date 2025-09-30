@@ -4,7 +4,7 @@ Most contemporary deployments of DoH have occurred in browsers that provide limi
 
 Cloudflare, Cloudflare, Quad9, NextDNS, CleanBrowsing, and OpenDNS are the DoH resolvers that have been deployed
 to users of major browsers as of April 14,
-2025~\cite{bravebrowser,edgebrowser,ffbrowser,chromebrowser,operabrowser}.  We
+2025.  We
 define these resolvers as {\em
 mainstream}.
 Yet, many other DoH resolvers have been deployed that are currently
@@ -25,7 +25,7 @@ We define DNS query response time as the
 end-to-end time it takes for a client to initiate a query and receive a
 response.  To measure query response times with various DoH resolvers, we
 performed dig queries to the resolvers. We used the public, open-source Netrics
-platform~\cite{netrics} to conduct periodic measurements. Netrics
+platform to conduct periodic measurements. Netrics
 provides a variety of open-source network measurement tests, and we added our 
 test to this suite. 
 
@@ -37,7 +37,7 @@ and network latency.
 
 We collect continuous measurements via two sources—-home network devices and Amazon EC2 instances. The home network measurements were across four units in the same apartment complex in the Chicagoland area. 
 We installed our measurement platform on Raspberry Pi devices, which we used to  collect data. 
-For the EC2~\cite{amazon_ec2} measurements, we deployed one server
+For the EC2 measurements, we deployed one server
 in each of the Ohio, Frankfurt, and Seoul EC2 regions.  We chose to perform
 measurements from multiple global vantage points to understand how DoH
 performance varies not only by which resolver is used, but also which
@@ -45,12 +45,11 @@ geographic region the client is located in.  Each server utilized 8 GB of RAM
 and 2 virtual CPU cores (the \texttt{t2.xlarge} instance type), and they each
 used Linux/UNIX.
 
-\begin{figure}[t!]
-\centering\includegraphics[width=0.8\columnwidth]{figures/ohio_NA.pdf}
-\caption{The DNS response time and ICMP ping time distributions for
-    encrypted DNS resolvers located in North America, measured from an EC2
-    instance in Ohio.  The plot shows distributions for both DNS response times
-    and ICMP round-trip latency. Mainstream resolvers are shown in boldface.}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.6\columnwidth]{figures/ohio_NA.pdf}
+\caption{DNS response time and ICMP ping time distributions for
+    encrypted DNS resolvers located in North America, measured from EC2 in Ohio. Mainstream resolvers are bolded.}
     \label{fig:dns-us-ohio}
 \end{figure}
 
@@ -62,6 +61,7 @@ As expected, most mainstream resolvers outperformed non-mainstream resolvers fro
 
 \begin{table}[t!]
 \centering
+\scriptsize
 \begin{tabular}{l|rr}
 \toprule
     \textbf{Resolver} & \multicolumn{2}{c}{\textbf{Vantage Point}} \\
@@ -80,6 +80,7 @@ public.dns.iij.jp                              & 39.5                           
 
 \begin{table}[t!]
 \centering
+\scriptsize
 \begin{tabular}{l|rr}
 \toprule
 \textbf{Resolver} & \multicolumn{2}{c}{\textbf{Vantage Point}} \\
