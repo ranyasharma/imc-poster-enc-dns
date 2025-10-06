@@ -1,4 +1,4 @@
-DNS queries have historically been unencrypted, leaving users susceptible to eavesdropping [30]; queries can also be intercepted and manipulated~\cite{jones2016detecting}. To address these privacy and security vulnerabilities, encrypted DNS protocols have been developed and deployed, including DNS-over-HTTPS (DoH)~\cite{rfc8484}.
+DNS queries have historically been unencrypted, leaving users susceptible to eavesdropping; queries can also be intercepted and manipulated~\cite{jones2016detecting}. To address these privacy and security vulnerabilities, encrypted DNS protocols have been developed and deployed, including DNS-over-HTTPS (DoH)~\cite{rfc8484}.
 
 Most contemporary deployments of DoH have occurred in browsers that provide limited options for resolvers~\cite{chromeResolvers,ffChoices}. Although DoH protects against on-path eavesdropping, it does not prevent resolvers themselves from seeing the contents of DNS queries. Thus, some have argued that browser-based DoH deployments shift privacy concerns from eavesdroppers to potential misuse by major DNS providers~\cite{vixie}.
 
@@ -35,7 +35,7 @@ message and noted the round-trip time.  This enabled us to explore
 whether there was a consistent relationship between high query response times
 and network latency.
 
-We collect continuous measurements via two sources—-home network devices and Amazon EC2 instances. The home network measurements were across four units in the same apartment complex in the Chicagoland area. 
+We collect continuous measurements via two sources—-home network devices and Amazon EC2 instances. The home network measurements were across four units in the same apartment complex in the Chicagoland area, collected between June 22--September 30, 2023. 
 We installed our measurement platform on Raspberry Pi devices, which we used to  collect data. 
 For the EC2 measurements, we deployed one server
 in each of the Ohio, Frankfurt, and Seoul EC2 regions.  We chose to perform

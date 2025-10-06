@@ -1,95 +1,66 @@
-%\documentclass[runningheads]{llncs}
-%\documentclass[10pt,sigconf,letterpaper,anonymous,nonacm]{acmart}
-%\documentclass[10pt,sigconf,letterpaper]{acmart}
 \documentclass[sigconf]{acmart}
-\settopmatter{printacmref=false} % Disable the ACM reference format block
-\renewcommand\footnotetextcopyrightpermission[1]{} % Remove copyright footnote
-\pagestyle{plain}
-% General
-% -------
-\usepackage[labelfont={small,bf},textfont={small,it},skip=1pt]{caption}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{caption}
-\usepackage{tabularx}
-\usepackage[normalem]{ulem}
-\usepackage{fancyref}
-\usepackage{xcolor}
-\usepackage{float}
-\usepackage{cite}
+
+%% Disable page numbers (required by IMC)
+\settopmatter{printfolios=false}
+\pagestyle{empty}
+
+
+%% Packages (only minimal set you need)
+\let\Bbbk\relax
 \usepackage{amssymb}
-\usepackage{pdflscape}
-\usepackage{balance}
+\usepackage[all=normal,wordspacing]{savetrees}
+\usepackage[font=small,format=plain,labelfont=bf,textfont=it,skip=0pt]{caption}
 \usepackage{subcaption}
 
 
-%\usepackage[skip=0.1cm]{parskip}
-%\setlength{\textfloatsep}{0pt}
-%\titlespacing*{\section}{0pt}{1.1\baselineskip}
+%% Metadata
+\copyrightyear{2025} 
+\acmYear{2025} 
+\setcopyright{acmlicensed}
+\acmConference[IMC '25]{Proceedings of the 2025 ACM Internet Measurement Conference}{October 28--31, 2025}{Madison, WI, USA}
+\acmBooktitle{Proceedings of the 2025 ACM Internet Measurement Conference (IMC '25), October 28--31, 2025, Madison, WI, USA}
+\acmDOI{10.1145/3730567.3768608}
+\acmISBN{979-8-4007-1860-1/2025/10}
 
-\useunder{\uline}{\ul}{}
-
-\newcommand{\eg}{{\it e.g.}}
-\newcommand{\ie}{{\it i.e.}}
-\newcommand{\etal}{{\it et al.}}
+\usepackage{microtype}
+\DisableLigatures{encoding = *, family = *}
+\microtypesetup{expansion=false}
 
 
-\pagestyle{plain}
-
-
-%%%%%%%%%%%%%%%%%%%%  SPACE SAVINGS %%%%%%%%%%%%%%%%%%%%%%
-
-%\usepackage[all=normal,wordspacing]{savetrees}
-
-%%%%%%%%%%%%%%%%%%%%  TITLE/AUTHORS  %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%  START DOCUMENT  %%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\sloppy
 
 \title{Poster: Global Measurements of the Availability and Response Times of \\ Public Encrypted DNS Resolvers}
-
 
 \author{Ranya Sharma}
 \affiliation{%
   \institution{University of Chicago}
   \city{Chicago}
-  \country{Illinois}}
+  \country{USA}}
 \email{ranyasharma@uchicago.edu}
 
 \author{Nick Feamster}
 \affiliation{%
   \institution{University of Chicago}
   \city{Chicago}
-  \country{Illinois}}
+  \country{USA}}
 \email{feamster@uchicago.edu}
 
-\copyrightyear{2025} 
-\acmYear{2025} 
-\setcopyright{rightsretained}
-\acmConference[IMC '25]{Proceedings of the 2025 ACM Internet Measurement Conference}{October 28--31, 2025}{Madison, WI, USA}
-\acmBooktitle{Proceedings of the 2025 ACM Internet Measurement Conference (IMC '25), October 28--31, 2025, Madison, WI, USA}
-\acmDOI{10.1145/3730567.3768608}
-\acmISBN{979-8-4007-1860-1/2025/10}
+\renewcommand{\shortauthors}{Ranya Sharma, Nick Feamster}
 
-%%%%%%%%%%%%%%%%%%%%  START OF DOCUMENT  %%%%%%%%%%%%%%%%%
-
-% Float spacing tweaks
-\setlength{\textfloatsep}{10pt plus 1pt minus 2pt} % space after figures/tables
-\setlength{\floatsep}{8pt plus 1pt minus 2pt}      % space between floats
-\setlength{\intextsep}{8pt plus 1pt minus 2pt}     % space for floats in text
-
-
-\begin{document}
-
-\begin{sloppypar}
-
+%%%%%%%%%%%%%%%%%%%%  ABSTRACT ONLY  %%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 \input{sections/abstract}
 \end{abstract}
-        
 \maketitle
 
-\bibliographystyle{abbrv}
+\microtypesetup{protrusion=false}
+
+%%%%%%%%%%%%%%%%%%%%  REFERENCES  %%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{ACM-Reference-Format}
+\balance
+
 \bibliography{paper}
 
-\end{sloppypar}
 \end{document}
-
-%%%%%%%%%%%%%%%%%%%%  END OF DOCUMENT  %%%%%%%%%%%%%%%%%%%%

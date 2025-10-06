@@ -3,10 +3,13 @@ TARGET=paper
 all: pdf
 
 pdf:
-	latexmk -latexoption="-file-line-error -8bit" -xelatex $(TARGET).tex
+	pdflatex $(TARGET).tex
+	pdflatex $(TARGET).tex
+	bibtex $(TARGET)
+	pdflatex $(TARGET).tex
 
 clean:
-	latexmk -c
+	rm -f *.aux *.bbl *.blg *.log *.out *.pdf *.toc *.lof *.lot *.dvi *.ps *.brf *.spl *.synctex.gz *.fdb_latexmk *.fls *.bcf *.run.xml
 
 cleanall: clean
 	latexmk -C
