@@ -4,19 +4,27 @@
 \settopmatter{printfolios=false}
 \pagestyle{empty}
 
+\setlength{\floatsep}{3pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{3pt plus 1pt minus 1pt}
+
+
+\usepackage[compact]{titlesec}
+\titlespacing*{\section}{0pt}{*0.8}{*0.6}
+\titlespacing*{\subsection}{0pt}{*0.6}{*0.4}
+
 
 %% Packages (only minimal set you need)
 \let\Bbbk\relax
 \usepackage{amssymb}
-\usepackage[all=normal,wordspacing]{savetrees}
 \usepackage[font=small,format=plain,labelfont=bf,textfont=it,skip=0pt]{caption}
+\captionsetup{belowskip=0pt,aboveskip=2pt}
 \usepackage{subcaption}
 
 
 %% Metadata
 \copyrightyear{2025} 
 \acmYear{2025} 
-\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
 \acmConference[IMC '25]{Proceedings of the 2025 ACM Internet Measurement Conference}{October 28--31, 2025}{Madison, WI, USA}
 \acmBooktitle{Proceedings of the 2025 ACM Internet Measurement Conference (IMC '25), October 28--31, 2025, Madison, WI, USA}
 \acmDOI{10.1145/3730567.3768608}
@@ -31,7 +39,7 @@
 \begin{document}
 \sloppy
 
-\title{Poster: Global Measurements of the Availability and Response Times of \\ Public Encrypted DNS Resolvers}
+\title{Poster: Global Measurements of the Availability and Response Times of Public Encrypted DNS Resolvers}
 
 \author{Ranya Sharma}
 \affiliation{%
@@ -50,10 +58,14 @@
 \renewcommand{\shortauthors}{Ranya Sharma, Nick Feamster}
 
 %%%%%%%%%%%%%%%%%%%%  ABSTRACT ONLY  %%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
 \input{sections/abstract}
-\end{abstract}
+
 \maketitle
+\begin{sloppypar}
+\input{sections/introduction}
+\input{sections/method}
+\input{sections/results}
+\end{sloppypar}
 
 \microtypesetup{protrusion=false}
 
